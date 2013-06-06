@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <TableRow android:gravity="center|right" >
+
+        <TextView
+            android:id="@+id/textView_bubble_out_text_context"
+            style="@style/ChattingUIText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/chatto_bg_normal"
+            android:gravity="left|center"
+            android:text="TextView"
+            android:textColor="#000" />
+
+        <ImageView
+            android:id="@+id/imageView_bubble_out_text_head"
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            android:src="@drawable/retouxiang" />
+    </TableRow>
+
+</TableLayout>

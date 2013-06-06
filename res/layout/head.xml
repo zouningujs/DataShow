@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- ListView的头部 -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+	<!-- 内容 -->
+
+	<RelativeLayout android:layout_width="fill_parent"
+		android:layout_height="wrap_content" 
+		android:id="@+id/head_contentLayout"
+		android:paddingLeft="30dp">
+
+		<!-- 箭头图像、进度条 -->
+		<FrameLayout android:layout_width="wrap_content"
+			android:layout_height="wrap_content" 
+			android:layout_alignParentLeft="true"
+			android:layout_centerVertical="true">
+
+			<!-- 箭头 -->
+			<ImageView android:layout_width="wrap_content"
+				android:layout_height="wrap_content" 
+				android:layout_gravity="center"
+				android:src="@drawable/arrow" 
+				android:id="@+id/head_arrowImageView" />
+
+			<!-- 进度条 -->
+			<ProgressBar android:layout_width="wrap_content"
+				android:layout_height="wrap_content" 
+				style="?android:attr/progressBarStyleSmall"
+				android:layout_gravity="center" 
+				android:id="@+id/head_progressBar"
+				android:visibility="gone" />
+		</FrameLayout>
+
+		<!-- 提示、最近更新 -->
+		<LinearLayout android:layout_width="wrap_content"
+			android:layout_height="wrap_content" 
+			android:layout_centerHorizontal="true"
+			android:orientation="vertical" 
+			android:gravity="center_horizontal">
+
+			<!-- 提示 -->
+			<TextView android:layout_width="wrap_content"
+				android:layout_height="wrap_content" 
+				android:text="下拉刷新"
+				android:textColor="@color/white" 
+				android:textSize="20sp"
+				android:id="@+id/head_tipsTextView" />
+
+			<!-- 最近更新 -->
+			<TextView android:layout_width="wrap_content"
+				android:layout_height="wrap_content" 
+				android:id="@+id/head_lastUpdatedTextView"
+				android:text="上次更新" 
+				android:textColor="@color/gold"
+				android:textSize="10sp" />
+		</LinearLayout>
+	</RelativeLayout>
+
+	<!-- 消息内容的类型 -->
+	<RelativeLayout
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_marginTop="10dp"
+	    android:id="@+id/head_message_filter"
+	     >
+
+		<TextView
+		    android:id="@+id/message_filter_all"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentLeft="true"
+		    android:layout_alignParentTop="true"
+		    android:layout_marginLeft="20dp"
+		    android:text="全部" />
+
+		<TextView
+		    android:id="@+id/message_filter_invite"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentTop="true"
+		    android:layout_centerHorizontal="true"
+		    android:text="被邀请的" />
+
+		<TextView
+		    android:id="@+id/message_filter_self"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentRight="true"
+		    android:layout_alignParentTop="true"
+		    android:layout_marginRight="20dp"
+		    android:text="我发起的" />
+
+	</RelativeLayout>
+
+</LinearLayout>

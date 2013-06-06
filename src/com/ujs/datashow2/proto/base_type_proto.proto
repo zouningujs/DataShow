@@ -1,0 +1,157 @@
+/*
+ base_type_proto
+
+ Author:
+
+ Xu Rui
+
+ Xu Rui (xurui@ctid.com.cn)
+  
+ Version: 1.0
+
+ Creation Time: 2012-07-13
+
+ Description:
+
+  Basic type definitions
+
+*/
+
+option optimize_for = LITE_RUNTIME;
+
+package ctxb.proto;
+
+enum LoginAccountType {
+    MOBILE_NUMBER     = 0;
+    NICK_NAME         = 1;
+}
+
+enum ActivityStatus {
+    OPEN              = 0;
+    CLOSED            = 1;
+}
+
+enum LinkType {
+    EXTERNAL          = 0;
+    INTERNAL_RELATIVE = 1;
+}
+
+enum ContentType {
+    PLAIN_TEXT        = 0;
+    HTML              = 1;
+	RESOURCE          = 2;
+}
+
+enum ResourceType {
+    IMAGE             = 0;
+    AUDIO             = 1;
+}
+
+enum ActivityTemplateType {
+    NORMAL            = 0;
+    ADVANCED          = 1;
+}
+
+enum OrganizerType {
+    USER              = 0;
+    SYSTEM            = 1;
+}
+
+message UserInfo {
+    optional uint32 version                 = 1;
+    optional string mobile_number           = 2;
+	optional string nick_name               = 3;
+	optional bool gender                    = 4;
+	optional string email                   = 5;
+	optional string company                 = 6;
+	optional bytes portrait_data            = 7;
+	optional string portrait_url            = 8;
+	optional string note                    = 9;
+}
+
+message BasicActivityInfo {
+    required string activity_id             = 1;
+    required string activity_name           = 2;
+	required OrganizerType organizer_type   = 3;
+	required ActivityMember organizer       = 4;
+	optional string organize_time           = 5;
+	optional string activity_time           = 6;
+	optional string description             = 7;
+	optional ContentType description_type   = 8;
+	optional Location location              = 9;
+	optional ActivityStatus status          = 10;
+	repeated Resource resource              = 11;
+	optional uint32 version                 = 12;
+}
+
+message ActivityMember {
+    required string name                    = 1;
+    required string mobile_number           = 2;
+	optional bool is_notified               = 3;
+    optional bool is_applied                = 4;
+}
+
+message Location {
+    required LocationCoordinate coordinate  = 1;
+    required string description             = 2;
+}
+
+message LocationCoordinate {
+    required float longitude                = 1;
+    required float latitude                 = 2;
+}
+
+message Resource {
+    required LinkType link_type             = 1;
+    required ResourceType resource_type     = 2;
+	required string url                     = 3;
+}
+
+message ActivitySummary {
+    required string id                      = 1;
+    required ActivityStatus status          = 2;
+	required uint32 version                 = 3;
+}
+
+message InviteeSummary {
+    required string id                      = 1;
+	required uint32 version                 = 2;
+}
+
+message MessageBoardSummary {
+    required string id                      = 1;
+	required uint32 version                 = 2;
+}
+
+message ActivityDetail {
+    required BasicActivityInfo basic_info     = 1;
+	required uint32 invitee_number            = 2;
+	required uint32 invitation_applied_number = 3;
+	required uint32 invitee_version           = 4;
+	required uint32 message_number            = 5;
+	required uint32 message_board_version     = 6;
+}
+
+message BoardMessage {
+    required string message_time              = 1;
+	required ContentType content_type         = 2;
+	optional string text_message              = 3;
+	optional Resource resource                = 4;
+}
+
+message PosterInfo {
+    required string mobile_number             = 1;
+	required string portrait_url              = 2;
+}
+
+message ActivityTemplate {
+    required string id                        = 1;
+	required ActivityTemplateType type        = 2;
+	required string type_name                 = 3;
+	required string name                      = 4;
+	optional string icon_url                  = 5;
+	optional string description               = 6;
+	optional ContentType description_type     = 7;
+	repeated Resource resource                = 8;
+	optional uint32 version                   = 9;
+}

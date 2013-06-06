@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:key="flight_option_preference"
+    android:summary="@string/listPrefSummary"
+    android:title="@string/listPrefTitle" >
+
+    <PreferenceCategory
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:key="meats_category"
+        android:summary="试下分组"
+        android:title="分组标题" >
+        <ListPreference
+            android:defaultValue="@string/flight_sort_option_default_value"
+            android:dialogTitle="@string/listPrefDialogTitle"
+            android:entries="@array/flight_sort_options"
+            android:entryValues="@array/flight_sort_options_values"
+            android:key="@string/selected_flight_sort_option"
+            android:summary="@string/listSummary"
+            android:title="@string/listTitle" />
+    </PreferenceCategory>
+    
+
+    <PreferenceScreen
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:key="vegi_screen"
+        android:title="分组标题2"
+        android:summary="试下分组2"
+        >
+    
+    <CheckBoxPreference
+        android:key="show_airline_column_pref"
+        android:summary="Show Airline column"
+        android:title="Airline" />
+    </PreferenceScreen>
+
+    <ListPreference
+            android:defaultValue="@string/flight_sort_option_default_value"
+            android:dialogTitle="@string/listPrefDialogTitle"
+            android:key="listPreference"
+            android:summary="代码中设定值"
+            android:title="@string/listTitle" />
+    
+    <EditTextPreference
+        android:dialogTitle="Package Name"
+        android:key="package_name_preference"
+        android:summary="Set the package name for generated code"
+        android:title="Set Package Name" />
+
+    <!-- 铃声 -->
+    <RingtonePreference
+        android:key="ring_tone_pref"
+        android:ringtoneType="alarm"
+        android:showSilent="true"
+        android:summary="Set Ringtone"
+        android:title="Set Ringtone Preference" />
+
+</PreferenceScreen>

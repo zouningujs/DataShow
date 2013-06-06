@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/textView_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView" />
+
+    <Button
+        android:id="@+id/button_clear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="清除内容" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/button_preference"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="首选项" />
+
+        <Button
+            android:id="@+id/button_readPreference"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="读取首选项配置" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button_multiContacts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="多选联系人" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/button_recoder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="录音开始" />
+        <Button
+            android:id="@+id/button_recoder_stop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="录音结束" />
+
+        <Button
+            android:id="@+id/button_play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="播放" />
+
+        <Button
+            android:id="@+id/button_audio_activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="录音界面" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/button_notify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="弹通知" />
+
+        <Button
+            android:id="@+id/button_listview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="列表" />
+
+        <Button
+            android:id="@+id/button_listview_images"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ListviewImages" />
+
+        <Button
+            android:id="@+id/button_prototest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Proto" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/button_bubble"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="气泡listview" />
+
+        <Button
+            android:id="@+id/button_pullrefresh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="下拉更新列表" />
+
+        <Button
+            android:id="@+id/button_map"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="map" />
+
+        <Button
+            android:id="@+id/button_map2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="map2" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/btn_jni"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="jni" />
+
+        <Button
+            android:id="@+id/btn_jni2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="jni2" />
+
+    </LinearLayout>
+
+</LinearLayout>

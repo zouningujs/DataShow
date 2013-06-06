@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, DataShow2Activity!</string>
+    <string name="app_name">DataShow2</string>
+    <string name="listPrefTitle">航班选项</string>
+    <string name="listPrefSummary">设置搜索选项</string>
+    <string name="selected_flight_sort_option">航班排序选项</string>
+    <string name="listTitle">选择航班选项</string>
+    <string name="listSummary">筛选航班的排序方法</string>
+    <string name="listPrefDialogTitle">listPrefDialogTitle</string>
+    <string name="flight_sort_option_default_value">0</string>
+    
+    <string-array name="flight_sort_options">
+        <item >Total Cost</item>
+        <item ># of Stops</item>
+        <item >Airline</item>
+    </string-array>
+  
+    <string-array name="flight_sort_options_values">
+        <item >0</item>
+        <item >1</item>
+        <item >2</item>
+    </string-array>
+    
+    <string name="exception">Exception!</string>
+    <string name="ok">OK</string>
+
+</resources>
